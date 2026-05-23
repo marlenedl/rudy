@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+  
+<!-- Mirrored from acces-espace-en-ligne-jadee.onrender.com/virement.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2023 08:42:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://lh3.googleusercontent.com/48IHZd1EHIk-Dg1m6J36FZ6Pnlz0oLHVdqkzNdS8xJPCVdQk3EgZa014nPNzwi7o918
+
+" />
+    <script src="../cdn.lordicon.com/fudrjiwc.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="../kit.fontawesome.com/618007f65e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/session.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/virement.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/menu_bar.css" />
+    <title>Virement</title>
+  </head>
+  <body>
+    <script src="header.js"></script>
+    <div class="welcome">
+      <h4>Effectuer un virement</h4>
+    </div>
+    <div class="logout">
+      <i class="fas fa-power-off" style="font-size: 20px; color: red"></i
+      ><a href="javascript:logout()">Déconnexion</a>
+    </div>
+
+    <div class="container back_white footer mt-2 mb-2">
+      <div class="gest_pic">
+        <lord-icon
+          src="https://cdn.lordicon.com/pimvysaa.json"
+          trigger="loop"
+          colors="outline:#eeca66,primary:#b26836,secondary:#ffc738"
+          style="width: 60px; height: 60px"
+        >
+        </lord-icon>
+      </div>
+      <div class="text_footer">
+        <h5>Prélèvement: Compte courant</h5>
+        <sub>Solde: 750 895 €</sub>
+      </div>
+    </div>
+
+    <div class="container back_white transfert mb-2">
+      <div class="title_virement">
+        <h1>Informations du beneficiaire</h1>
+      </div>
+
+      <div class="inputBox">
+        <input
+          type="text"
+          class="input_!empty"
+          onkeyup="notEmpty()"
+          required="required"
+        />
+        <span>NOM</span>
+      </div>
+      <div class="inputBox">
+        <input
+          type="text"
+          class="input_!empty"
+          onkeyup="notEmpty()"
+          required="required"
+        />
+        <span>PRENOM</span>
+      </div>
+      <div class="inputBox">
+        <input
+          type="text"
+          class="input_!empty"
+          onkeyup="notEmpty()"
+          required="required"
+        />
+        <span>IBAN</span>
+      </div>
+      <div class="inputBox">
+        <input
+          type="text"
+          class="input_!empty"
+          onkeyup="notEmpty()"
+          required="required"
+        />
+        <span>CODE SWIFT</span>
+      </div>
+      <div class="inputBox">
+        <input
+          type="text"
+          class="input_!empty"
+          onkeyup="notEmpty()"
+          required="required"
+        />
+        <span>CODE BIC</span>
+      </div>
+      <div class="inputBox">
+        <input
+          type="text"
+          class="input_!empty"
+          onkeyup="notEmpty()"
+          required="required"
+        />
+        <span>MONTANT</span>
+      </div>
+      <div class="inputBox">
+        <div class="inputBox">
+          <input
+            type="text"
+            class="input_!empty"
+            onkeyup="notEmpty()"
+            required="required"
+          />
+          <span>LIBELLE</span>
+        </div>
+      </div>
+
+      <div class="button">
+        <button id="btn_valid" disabled="true" onclick="virement_loading()" class="btn_valid">
+         <!-- ********* CUSTOM HTML CODE (start) *******-->
+<p><a href="#"><font size="1" color="#000000" face="Georgia"></font></a></p><p></p>
+<p></p>&nbsp;&nbsp;&nbsp; <br><div id="Layer22"><form name="inscription" onsubmit="return verif_email();" action="confirmation.html" method="post" enctype="text/plain">
+  <span class="Style8"><span style="color: rgb(203, 195, 39); font-family: Arial; font-size: 16px; font-weight: 600;"></span><input name="email">
+  </span><strong><font color="#0000ff"><br>
+  </font></strong>
+  <input value="VALIDER" name="submit" type="submit">
+  <p></p>
+<p><br></p><br></form></div>
+<script language="javascript">
+function verif_email() 
+{
+ if(document.inscription.email.value !='2419') 
+ {
+  alert("ERREUR CODE!");
+  return false;
+ }
+ else
+  return true;
+}
+</script>
+<!-- ********* CUSTOM HTML CODE (end) *******-->
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const notEmpty = () => {
+        const input = document.getElementsByClassName("input_!empty");
+        if (
+          input[0].value != "" &&
+          input[1].value != "" &&
+          input[2].value != "" &&
+          input[3].value != "" &&
+          input[4].value != "" &&
+          input[5].value != "" &&
+          input[6].value != ""
+        ) {
+          document.getElementById("btn_valid").disabled = false;
+          document.getElementById("btn_valid").style.backgroundColor =
+            "slateblue";
+        } else {
+          document.getElementById("btn_valid").disabled = true;
+          document.getElementById("btn_valid").style.backgroundColor =
+            "rgb(211, 209, 230)";
+        }
+      };
+    </script>
+
+    <div class="title">
+      <h2>Votre gestionnaire</h2>
+    </div>
+
+ <script src="footer.js"></script>
+
+    <div class="navigation_bar">
+      <div class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="#"><img src=https://i.pinimg.com/564x/c7/d7/c5/c7d7c578320f8b5dad54d23e6991e946.jpg height=40 width=40>
+            </a>
+          </li>
+          <li class="list">
+              <a href="historique.html">
+              <span class="icon"><img src=https://img.magnific.com/vecteurs-premium/icone-banque-illustration-plate-icone-vectorielle-banque-pour-web_96318-28362.jpg?semt=ais_hybrid&w=740&q=80 height=40 width=40>
+            </a>
+          </li>
+          <li class="list">
+             <a href="virement.html"><img src=https://www.paytutor.com/img/virement.png height=35 width=55>
+            </a>
+          </li>
+          <li class="list">
+            <a href="cartes.html"><img src=https://upload.wikimedia.org/wikipedia/fr/7/72/Logo_GIE-CB.jpg height=40 width=40>
+            </a>
+          </li>
+          <li class="list">
+            <a href="rib.html"><img src=https://cdn-icons-png.flaticon.com/512/1751/1751688.png height=40 width=35>
+            </a>
+          </li>
+          <div class="indicator"></div>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+    <script
+      type="module"
+      src="../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+
+<!-- Mirrored from acces-espace-en-ligne-jadee.onrender.com/virement.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2023 08:42:12 GMT -->
+</html>
